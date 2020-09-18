@@ -37,10 +37,10 @@ model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
 # opt = SGD(lr=0.01) # rmsprop, adam などもある
-opt = Adam()
+opt = Adam(lr=0.0001)
 
 model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
 
-model.fit(X_train, y_train, batch_size=32, epochs=20)
+model.fit(X_train, y_train, batch_size=32, epochs=100)
 
 score = model.evaluate(X_test, y_test, batch_size=32)
