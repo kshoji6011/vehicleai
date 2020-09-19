@@ -36,7 +36,7 @@ top_model.add(Dense(num_classes, activation='softmax'))
 model = Model(inputs=model.input, outputs=top_model(model.output))
 
 # model.summary()
-for layer in model.layer[:15]:
+for layer in model.layers[:15]:
     layer.trainable = False
 
 # opt = SGD(lr=0.01) # rmsprop, adam などもある
