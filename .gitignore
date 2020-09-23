@@ -6,3 +6,5 @@ pedestrian
 .vscode
 vehicle224.npy
 vgg16_transfer.h5
+__pycache__
+db.sqlite3
